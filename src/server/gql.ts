@@ -26,3 +26,21 @@ export function discussionGql(ghDiscussionCategoryId: string | undefined) {
           }
     }`;
 }
+
+
+export function discussionDetailGql(postId: number | undefined) {
+  return `{
+    repository(owner: "kietgudy", name: "bloggit-nextjs") {
+      discussion(number: ${postId}) {
+        title
+        bodyHTML
+        createdAt
+        author {
+          login
+          url
+          avatarUrl
+        }
+      }
+    }
+  }`
+}

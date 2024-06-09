@@ -14,3 +14,14 @@ export interface BlogPost {
     url: string
   }
 }
+
+export interface BlogDetail {
+  title: string
+  bodyHTML: string
+  createdAt: string
+  author: {
+    name: string
+    avatar: string
+    url: string
+  }
+}
